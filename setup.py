@@ -7,7 +7,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name='python-time',
-    version='0.1.0',
+    version='0.1.1',
     author='binary',
     author_email='nothing_style@126.com',
     description='sample time module',
@@ -15,6 +15,8 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     license="MIT",
     packages=setuptools.find_packages(),
+    install_requires=['arrow'],
+    url='https://github.com/hengdai/pytime',
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
