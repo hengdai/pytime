@@ -20,11 +20,14 @@ def microtime():
     return time.time()
 
 
-def time_format(timestamp=time.time(), format="%Y-%m-%d %X"):
+def time_format(timestamp=None, format="%Y-%m-%d %X"):
     """
     根据入参的时间戳和格式化一个时间戳(UTC+8h)
     默认当前时间戳
     """
+    if timestamp is None:
+        timestamp = int(time.time())
+
     struct_time = time.localtime(int(timestamp))
     return time.strftime(format, struct_time)
 
@@ -46,7 +49,7 @@ def strtotime(format_time):
     return int(time.mktime(struct_time))
 
 
-def shift(time_type: str, timestamp: int=time.time()):
+def shift(time_type: str, timestamp: int=None):
     """
     获取指定时间的偏移量之后的时间戳,偏移量单位可以为days、weeks、months、years。例如：1 days、-3 days、5 months etc.
     默认当前时间
@@ -55,6 +58,9 @@ def shift(time_type: str, timestamp: int=time.time()):
     :param int timestamp:
     :return int timestamp:
     """
+    if timestamp is None:
+        timestamp = int(time.time())
+
     if 'days' in time_type:
         split_arr = str(time_type).split('days')
         format_time = datetime.datetime.fromtimestamp(timestamp) + datetime.timedelta(days=int(split_arr[0]))

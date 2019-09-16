@@ -1,3 +1,10 @@
 from pytime import pytime
 
-print(pytime.shift('-3 years'))
+print(pytime.time_format())
+pytime.sleep(2)
+print(pytime.time_format())
+pytime.sleep(2)
+print(pytime.time_format())
+pytime.sleep(2)
+print(pytime.time_format())
+pytime.sleep(2)

@@ -7,7 +7,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name='python-time',
-    version='0.1.1',
+    version='0.1.2',
     author='binary',
     author_email='nothing_style@126.com',
     description='sample time module',
