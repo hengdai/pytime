@@ -22,16 +22,17 @@ print(pytime.timestamps())
 提供的所有方法：
 
 ```
-pytime.timestamps():
 
-pytime.microtime():
+pytime.timestamps()
 
-pytime.time_format(timestamp=None, format="%Y-%m-%d %X"):
+pytime.microtime()
 
-pytime.strtotime(format_time):
+pytime.time_format(timestamp=None, format="%Y-%m-%d %X")
 
-pytime.shift(time_type: str, timestamp: int=None):
+pytime.strtotime(format_time)
 
-pytime.sleep(second: int):
+pytime.shift(time_type: str, timestamp: int=None)
+
+pytime.sleep(second: int)
 
 ```
