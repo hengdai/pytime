@@ -83,6 +83,7 @@ def shift(time_type: str, timestamp: int=None):
     return int(return_time_stamp)
 
 
+# 时间sleep给定的几秒钟
 def sleep(second: int):
     time.sleep(int(second))
 
