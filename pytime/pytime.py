@@ -23,11 +23,19 @@ def microtime():
 def time_format(timestamp=None, format="%Y-%m-%d %X"):
     """
     根据入参的时间戳和格式化一个时间戳(UTC+8h)
-    默认当前时间戳
     """
     if timestamp is None:
         timestamp = int(time.time())
 
+    struct_time = time.localtime(int(timestamp))
+    return time.strftime(format, struct_time)
+
+
+def time_now_format(format="%Y-%m-%d %X"):
+    """
+    格式化当前时间格式化一个时间戳(UTC+8h)
+    """
+    timestamp = int(time.time())
     struct_time = time.localtime(int(timestamp))
     return time.strftime(format, struct_time)
 

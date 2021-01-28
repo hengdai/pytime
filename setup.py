@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 import setuptools
 
-with open("README.rst", "r",encoding='utf-8') as fh:
+with open("README.rst", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name='python-time',
-    version='0.1.2',
+    version='0.3.0',
     author='binary',
     author_email='nothing_style@126.com',
     description='sample time module',
